@@ -8,7 +8,7 @@
 }
 body{
     background-color: #f4f4f4;
-    font-size: 15px;
+    font-size: .9rem;
 }
 .container{
     text-align: center;
@@ -16,7 +16,7 @@ body{
     padding: 1rem;
 }
 #logo h1{
-    width: 140px;
+    max-width: 100%;
     color: white;
 }
 header{
@@ -73,4 +73,46 @@ nav .fa-times:hover{
 }
 nav a:hover{
     background-color:  rgba(72, 80, 87, 0.5);
+}
+section{
+    height: calc(100vh - 100px);
+    width: 100%;
+    background-image: url('/tools/images/table.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+@media (min-width: 900px){
+    .container{
+        margin:  0 auto;
+    }
+    #menu{
+        display: none;
+    }
+    #close-btn{
+        display: none;
+    }
+    .show-desktop{
+        display: block;
+    }
+    nav ul{
+        position: inherit;
+        width: auto;
+        height: auto;
+        background-color: none;
+        display: flex;
+        padding-top: 0;
+    }
+    nav ul li{
+        float: left;
+    }
+    nav a{
+        text-align: right;
+        background-color: inherit;
+    }
+    nav a:hover {
+        background-color: #f4f4f4;
+        color: red;
+    }
+    
 }
