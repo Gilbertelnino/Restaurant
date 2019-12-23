@@ -1,7 +1,8 @@
 *{
     margin: 0;
     padding: 0;
-    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 400;
+    font-family: 'Inria Serif', serif;
     box-sizing: border-box;
     list-style: none;
     text-decoration: none;
@@ -10,22 +11,22 @@ body{
     background-color: #f4f4f4;
     font-size: .9rem;
 }
-.container{
-    text-align: center;
-    background-color: tomato;
-    padding: 1rem;
-}
-#logo h1{
+#logo h2{
     max-width: 100%;
     color: white;
+    margin-top: 1rem;
+    margin-left: 22px;
+
 }
 header{
+    background-color: tomato;
     display: flex;
     justify-content: space-between;
+    min-height: 80px;
 }
 .fa-bars{
     position: absolute;
-    right: .7rem;
+    right: 0;
     top: .5em;
     font-size: 2rem;
     color: white;
@@ -74,45 +75,63 @@ nav .fa-times:hover{
 nav a:hover{
     background-color:  rgba(72, 80, 87, 0.5);
 }
-section{
-    height: calc(100vh - 100px);
+.main-header-section{
     width: 100%;
+    height: calc(100vh - 100px);
     background-image: url('/tools/images/table.jpg');
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
+
 }
-@media (min-width: 900px){
-    .container{
-        margin:  0 auto;
-    }
-    #menu{
-        display: none;
-    }
-    #close-btn{
-        display: none;
-    }
-    .show-desktop{
-        display: block;
-    }
-    nav ul{
-        position: inherit;
-        width: auto;
-        height: auto;
-        background-color: none;
-        display: flex;
-        padding-top: 0;
-    }
-    nav ul li{
-        float: left;
-    }
-    nav a{
-        text-align: right;
-        background-color: inherit;
-    }
-    nav a:hover {
-        background-color: #f4f4f4;
-        color: red;
-    }
-    
+.main-container{
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(400px,1fr));
+    grid-gap: 20px;
+    justify-content: space-around;
+    margin-top: 2rem;
+}
+.main-section{
+    background-color: rgba(145, 54, 54, 0.4);
+    padding: 2rem;
+    margin-left: 2rem;
+    margin-right: 2rem;
+}
+.main-section h1{
+    text-align: center;
+    padding: .8rem 0;
+    margin-top: -2rem;
+    padding-bottom: 2rem;
+    color: white;
+    background-color: red;
+}
+.main-section p{
+    text-align: justify;
+    margin-bottom: 2rem;
+}
+img{
+    margin-top: 2rem;
+    width: 100%;
+    height: 150px;
+}
+.main-section a{
+    color: white;
+    padding: .3rem;
+    background-color: red;
+    margin-top: 5rem;
+}
+footer{
+    text-align: center;
+    background-color: black;
+    color: white;
+    margin-top: 3rem;
+}
+footer ul{
+    margin-bottom: 2rem;
+    height: 100%;
+    display: flex;
+}
+footer li{
+    flex-direction: column;
+    padding: .4rem;
 }
