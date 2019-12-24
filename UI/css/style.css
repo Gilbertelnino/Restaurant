@@ -160,7 +160,7 @@ slide p{
     margin-top: -2rem;
     padding-bottom: 2rem;
     color: white;
-    background-color: red;
+    background-color: tomato;
 }
 .main-section p{
     text-align: justify;
@@ -169,13 +169,19 @@ slide p{
 img{
     margin-top: 2rem;
     width: 100%;
-    height: 150px;
 }
 .main-section a{
     color: white;
-    padding: .3rem;
-    background-color: red;
+    padding: .9rem;
+    background-color: tomato;
     margin-top: 5rem;
+    font-size: 1rem;
+}
+.main-section a:hover{
+    cursor: pointer;
+    color: red;
+    background-color: white;
+
 }
 .footer-container{
     background-color: black;
@@ -213,5 +219,43 @@ img{
     text-transform: capitalize;
     color: rgba(34, 86, 128, 0.5);
 }
+@media (min-width: 1024px){
+    .fa-times,.fa-bars{
+        display: none;
+    }
+    .show-desktop{
+        display: block;
+        margin: 0 auto;
+    }
+    nav ul{
+        position: inherit;
+        width: auto;
+        background-color: none;
+        height: auto;
+        display: flex;
+        padding-top:0;
+    }
+    nav ul li{
+        float: left;
+    }
+    nav a{
+        background-color: inherit;
+        text-align: right;
+        padding: 1rem 2rem;
+        font-size: 1rem;
+    }
+    nav a:hover{
+        background-color: white;
+        color: red;
+    }
+}
 
-
+@media (max-width: 680px){
+    .footer-container ul{
+        flex-direction: column;
+        margin-left: 3rem;
+    }
+    .footer-container ul li{
+        padding: 1rem;
+    }
+}
