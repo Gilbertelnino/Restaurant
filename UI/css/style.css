@@ -77,12 +77,69 @@ nav a:hover{
 }
 .main-header-section{
     width: 100%;
-    height: calc(100vh - 100px);
-    background-image: url('/tools/images/table.jpg');
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
+    height: 400px;
+    display:block;
+    overflow:hidden;
+    position: relative 
 
+}
+.main-header-section > *{
+    position: absolute;
+    display:block;
+    width:100%;
+    height: calc(100vh - 100px);
+    animation: slide 12s infinite;
+    overflow:hidden;
+}
+slide:nth-child(1){
+    left:0;
+    animation-delay:-1s;
+    background-image: url('https://theculturetrip.com/wp-content/uploads/2017/09/screen-shot-2017-09-27-at-12-33-28-am.png');
+    background-size:cover;
+    background-position:center;
+    background-repeat: no-repeat;
+}
+slide:nth-child(2){
+    animation-delay:2s;
+    background-image: url('https://media-cdn.tripadvisor.com/media/photo-s/11/1f/cf/47/nouvelle-decoration-soiree.jpg');
+    background-size:cover;
+    background-position:center;
+    background-repeat: no-repeat;
+}
+slide:nth-child(3){
+    animation-delay:5s;
+    background-image: url('https://media-cdn.tripadvisor.com/media/photo-s/11/1f/cf/47/nouvelle-decoration-soiree.jpg');
+    background-size:cover;
+    background-position:center;
+    background-repeat: no-repeat;
+}
+slide:nth-child(4){
+    left:0;
+    animation-delay:8s;
+    background-image: url('https://media-cdn.tripadvisor.com/media/photo-s/11/1f/cf/47/nouvelle-decoration-soiree.jpg');
+    background-size:cover;
+    background-position:center;
+    background-repeat: no-repeat;
+}
+slide p{
+    font-size:2rem;
+    bottom: 0;
+    color:white;
+    display:inline-block;
+    width:50%;
+    margin-top:18rem;
+    margin-left: 3rem;
+    padding: 1.3rem;
+    opacity: .3;
+    background-color: black;
+}
+@keyframes slide {
+    0%{left:100%;width:100%;}
+    5%{left: 0%;}
+    25%{ left: 0%}
+    30%{ left: -100%; width:100%;}
+    35%{left:-100%; width: 0%;}
+    100% { left: 100%; width:0%}
 }
 .main-container{
     display: grid;
@@ -103,7 +160,7 @@ nav a:hover{
     margin-top: -2rem;
     padding-bottom: 2rem;
     color: white;
-    background-color: red;
+    background-color: tomato;
 }
 .main-section p{
     text-align: justify;
@@ -112,26 +169,92 @@ nav a:hover{
 img{
     margin-top: 2rem;
     width: 100%;
-    height: 150px;
 }
 .main-section a{
     color: white;
-    padding: .3rem;
-    background-color: red;
+    padding: .9rem;
+    background-color: tomato;
     margin-top: 5rem;
+    font-size: 1rem;
 }
-footer{
-    text-align: center;
+.main-section a:hover{
+    cursor: pointer;
+    color: red;
+    background-color: white;
+
+}
+.footer-container{
     background-color: black;
     color: white;
-    margin-top: 3rem;
+    margin-top: 4rem;
+    width: 100%;
+    min-height: 300px;
+    
 }
-footer ul{
-    margin-bottom: 2rem;
-    height: 100%;
+.footer-container ul{
     display: flex;
+    justify-content: space-around;
+    padding-top:1rem;
 }
-footer li{
+.footer-container ul li{
+    color: white;
+    text-transform: capitalize;
+    font-size: 1.2rem;
+}
+.footer-container ul li a{
+    font-size: 1.9rem;
+    color: white
+    
+}
+.footer-container ul li ul{
     flex-direction: column;
-    padding: .4rem;
+}
+.footer-container .follow a{
+    padding: .6rem;
+}
+
+.footer-container ul li ul li{
+    padding: .3rem;
+    font-size: 1.2rem;
+    text-transform: capitalize;
+    color: rgba(34, 86, 128, 0.5);
+}
+@media (min-width: 1024px){
+    .fa-times,.fa-bars{
+        display: none;
+    }
+    .show-desktop{
+        display: block;
+        margin: 0 auto;
+    }
+    nav ul{
+        position: inherit;
+        width: auto;
+        background-color: none;
+        height: auto;
+        display: flex;
+        padding-top:0;
+    }
+    nav ul li{
+        float: left;
+    }
+    nav a{
+        background-color: inherit;
+        text-align: right;
+        padding: 1rem 2rem;
+        font-size: 1rem;
+    }
+    nav a:hover{
+        background-color: white;
+        color: red;
+    }
+}
+
+@media (max-width: 680px){
+    .footer-container ul{
+        flex-direction: column;
+    }
+    .footer-container ul li{
+        padding: 1rem;
+    }
 }
